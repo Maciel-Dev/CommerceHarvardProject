@@ -12,6 +12,7 @@ class AuctionListing():
     #Description
     #Start Bid
     #OPtional - Image URl
+    #Um ou mais usuário tem várias listagens
     
 
 class Bids():
@@ -21,9 +22,11 @@ class Bids():
     #One bid replace the last, if the actual is greater (Comparison)
     #UserName - FK
     #Datatime
+    #Um ou mais usuários pode ter mais de uma Bid
 
 class Comments():
     pass
     #ID (PK)
     #Comment
     #UserName - FK
+    #Um ou mais usuários pode ter mais de um Comment
