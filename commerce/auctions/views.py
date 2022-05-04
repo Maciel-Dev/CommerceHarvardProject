@@ -82,5 +82,9 @@ def createListing(request):
     return render(request, "auctions/createListing.html")
 
 def auctions(request, page):
-    titulo = AuctionListing.objects.get(title = page)
-    return render(request, "auctions/auctions.html")
+    auctionObj = AuctionListing.objects.filter(title = page)
+    return render(request, "auctions/auctions.html",
+    {
+        "object": auctionObj,
+        "titulo": page
+    })

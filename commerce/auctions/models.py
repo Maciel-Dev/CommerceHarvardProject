@@ -6,7 +6,7 @@ class User(AbstractUser):
     pass
 
 class AuctionListing(models.Model):
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=256)
     description = models.TextField(max_length=1024)
     startBid = models.DecimalField(max_digits=6, decimal_places=2)
     imageUrl = models.URLField(blank=True, null=True)
@@ -21,7 +21,7 @@ class Bids(models.Model):
     #One bid replace the last, if the actual is greater (Comparison)
     #Um ou mais usuários pode ter mais de uma Bid
 
-class Comments():
+class Comments(models.Model):
     #ID (PK)
     comment = models.TextField(max_length=1024)
     userName = models.ForeignKey(User, on_delete=models.RESTRICT)
