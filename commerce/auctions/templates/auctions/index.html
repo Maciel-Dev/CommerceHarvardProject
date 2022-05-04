@@ -3,5 +3,13 @@
 {% block body %}
     <h2>Active Listings</h2>
 
-    TODO
+    <ul>
+        {% for item in auctions %}
+            <p>{{ item.title }}</p>
+            <p>{{ item.description }}</p>
+            <p>{{ item.startBid }}</p>
+            <p>{{ item.image_url }}</p>
+            <a href="auctions\{{item.title}}"><button type="submit" class="btn btn-primary">Button</button></a>
+        {% endfor %}
+    </ul>
 {% endblock %}
